@@ -1,6 +1,7 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
 import Balance from "../components/Balance";
+import Header from "../components/Header";
 import Transactions from "../components/TxList";
 import { Tx } from "../lib/types";
 
@@ -21,6 +22,7 @@ export default function Home() {
   const totalSats = txs.reduce((acc, tx) => acc + tx.sats, 0);
   return (
     <View style={styles.container}>
+      <Header />
       <Balance sats={totalSats} />
       <Transactions txs={txs} />
     </View>
