@@ -1,6 +1,5 @@
 import React from "react";
 import { View, StyleSheet } from "react-native";
-import ActionButton from "../components/ActionButton";
 import Balance from "../components/Balance";
 import Transactions from "../components/TxList";
 import { Tx } from "../lib/types";
@@ -12,7 +11,7 @@ const txs: Tx[] = [
     date: new Date(1483228800000),
   },
   {
-    sats: 4634896347,
+    sats: 46896347,
     isIncoming: false,
     date: new Date(1262304000000),
   },
@@ -24,7 +23,6 @@ export default function Home() {
     <View style={styles.container}>
       <Balance sats={totalSats} />
       <Transactions txs={txs} />
-      {/* <ActionButton /> */}
     </View>
   );
 }
