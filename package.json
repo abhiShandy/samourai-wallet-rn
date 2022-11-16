@@ -1,0 +1,29 @@
+{
+  "name": "samourai-wallet-rn",
+  "version": "0.1.0",
+  "description": "Clone of the Samourai Wallet in React Native",
+  "scripts": {
+    "start": "expo start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhiShandy/samourai-wallet-rn.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/abhiShandy/samourai-wallet-rn/issues"
+  },
+  "homepage": "https://github.com/abhiShandy/samourai-wallet-rn#readme",
+  "dependencies": {
+    "expo": "^47.0.6",
+    "react": "18.1.0",
+    "react-native": "0.70.5",
+    "@types/react": "~18.0.24",
+    "@types/react-native": "~0.70.6"
+  },
+  "devDependencies": {
+    "typescript": "^4.9.3"
+  }
+}
