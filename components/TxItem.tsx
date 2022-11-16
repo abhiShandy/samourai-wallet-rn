@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons/faArrowDown";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons/faArrowUp";
 import { Tx } from "../lib/types";
+import { formatTime } from "../lib/formatDate";
 
 interface TransactionItemProps {
   tx: Tx;
@@ -26,9 +27,7 @@ export default function TransactionItem(props: TransactionItemProps) {
             size={20}
             style={styles.arrowIcon}
           />
-          <Text style={styles.time}>
-            {tx.date.getHours() + ":" + tx.date.getMinutes()}
-          </Text>
+          <Text style={styles.time}>{formatTime(tx.date)}</Text>
         </View>
         <View style={styles.txRight}>
           <Text
