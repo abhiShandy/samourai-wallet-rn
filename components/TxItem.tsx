@@ -36,7 +36,7 @@ export default function TransactionItem(props: TransactionItemProps) {
               tx.isIncoming ? styles.incomingAmt : styles.outgoingAmt,
             ]}
           >
-            {formatSats(tx.sats.toString())}
+            {formatSats(tx.sats)}
           </Text>
         </View>
       </View>

@@ -10,7 +10,7 @@ interface BalanceProps {
 export default function Balance(props: BalanceProps) {
   return (
     <View style={styles.container}>
-      <Text style={styles.balance}>{formatSats(props.sats.toString())}</Text>
+      <Text style={styles.balance}>{formatSats(props.sats)}</Text>
     </View>
   );
 }
