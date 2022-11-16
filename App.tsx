@@ -1,13 +1,17 @@
 import React from "react";
-import { SafeAreaView, StatusBar } from "react-native";
+import { StatusBar } from "react-native";
+import { SafeAreaProvider } from "react-native-safe-area-context";
 import Home from "./screens/Home";
 import { colors } from "./theme/colors";
 
 export default function App() {
   return (
-    <SafeAreaView>
-      <StatusBar backgroundColor={colors.SlateGreyAccent} />
+    <SafeAreaProvider>
+      <StatusBar
+        backgroundColor={colors.SlateGreyAccent}
+        barStyle="light-content"
+      />
       <Home />
-    </SafeAreaView>
+    </SafeAreaProvider>
   );
 }
