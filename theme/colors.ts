@@ -10,5 +10,5 @@ export const colors = {
   BottomSheetBackground: "#3B3B3B",
   Error: "#E53935",
   Warning: "#fca311",
-  Succes: "#0ecf96",
+  Success: "#0ecf96",
 };
