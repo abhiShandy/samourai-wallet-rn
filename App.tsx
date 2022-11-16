@@ -1,10 +1,13 @@
 import React from "react";
-import { View, Text } from "react-native";
+import { SafeAreaView, StatusBar } from "react-native";
+import Home from "./screens/Home";
+import { colors } from "./theme/colors";
 
 export default function App() {
   return (
-    <View>
-      <Text>Hello World!</Text>
-    </View>
+    <SafeAreaView>
+      <StatusBar backgroundColor={colors.SlateGreyAccent} />
+      <Home />
+    </SafeAreaView>
   );
 }
