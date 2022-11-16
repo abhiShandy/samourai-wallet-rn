@@ -13,7 +13,7 @@ import {
   MenuOption,
   MenuTrigger,
 } from "react-native-popup-menu";
-import { padding } from "../theme/theme";
+import { iconColor, standardPadding } from "../theme/theme";
 
 export default function Header() {
   return (
@@ -22,11 +22,11 @@ export default function Header() {
         <Text>Logo</Text>
       </View>
       <View style={styles.headerRight}>
-        <FontAwesomeIcon icon={faWifi} size={20} style={styles.icon} />
-        <FontAwesomeIcon icon={faExpand} size={20} style={styles.icon} />
+        <FontAwesomeIcon icon={faWifi} size={20} style={iconColor} />
+        <FontAwesomeIcon icon={faExpand} size={20} style={iconColor} />
         <Menu>
           <MenuTrigger>
-            <FontAwesomeIcon icon={faEllipsisV} size={20} style={styles.icon} />
+            <FontAwesomeIcon icon={faEllipsisV} size={20} style={iconColor} />
           </MenuTrigger>
           <MenuOptions customStyles={optionsStyles}>
             <MenuOption text="Export wallet backup" />
@@ -48,27 +48,23 @@ const styles = StyleSheet.create({
   },
   header: {
     flex: 2,
-    paddingHorizontal: padding.standard * 3,
+    paddingHorizontal: standardPadding * 3,
   },
   headerRight: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
   },
-  icon: {
-    color: colors.TextPrimary,
-    fontWeight: "300",
-  },
 });
 
 const optionsStyles = {
   optionsContainer: {
     backgroundColor: colors.Window,
-    padding: padding.standard,
+    padding: standardPadding,
   },
   optionsWrapper: {},
   optionWrapper: {
-    margin: padding.standard,
+    margin: standardPadding,
   },
   optionTouchable: {
     activeOpacity: 70,
