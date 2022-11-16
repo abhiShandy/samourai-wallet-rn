@@ -19,7 +19,7 @@ export default function Header() {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
-        <Text>Logo</Text>
+        <View style={styles.userLogo}></View>
       </View>
       <View style={styles.headerRight}>
         <FontAwesomeIcon icon={faWifi} size={20} style={iconColor} />
@@ -45,15 +45,23 @@ const styles = StyleSheet.create({
     backgroundColor: colors.SlateGreyAccent,
     flexDirection: "row",
     padding: 5,
+    justifyContent: "center",
+    alignItems: "center",
   },
   header: {
     flex: 2,
-    paddingHorizontal: standardPadding * 3,
+    paddingHorizontal: standardPadding,
   },
   headerRight: {
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
+  },
+  userLogo: {
+    borderRadius: 100,
+    backgroundColor: colors.Accent,
+    width: 40,
+    height: 40,
   },
 });
 
