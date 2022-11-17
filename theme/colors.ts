@@ -11,5 +11,5 @@ export const colors = {
   Error: "#E53935",
   Warning: "#fca311",
   Success: "#0ecf96",
-  iconColor: "#ffffff",
+  iconColor: "white",
 };

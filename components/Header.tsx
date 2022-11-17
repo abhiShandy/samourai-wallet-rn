@@ -22,17 +22,12 @@ export default function Header() {
         <View style={styles.userLogo}></View>
       </View>
       <View style={styles.headerRight}>
-        <FontAwesomeIcon icon={faWifi} size={20} style={iconColor} />
-        <FontAwesomeIcon icon={faExpand} size={20} style={iconColor} />
         <Menu>
           <MenuTrigger>
             <FontAwesomeIcon icon={faEllipsisV} size={20} style={iconColor} />
           </MenuTrigger>
           <MenuOptions customStyles={optionsStyles}>
-            <MenuOption text="Export wallet backup" />
-            <MenuOption text="Show unspent outputs" />
-            <MenuOption text="Postmix transactions" />
-            <MenuOption text="Support" />
+            <MenuOption text="About" />
           </MenuOptions>
         </Menu>
       </View>
@@ -55,13 +50,17 @@ const styles = StyleSheet.create({
   headerRight: {
     flex: 1,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
+    paddingRight: standardPadding,
   },
   userLogo: {
     borderRadius: 100,
     backgroundColor: colors.Accent,
     width: 40,
     height: 40,
+  },
+  menuStyle: {
+    margin: -10,
   },
 });
 
@@ -70,12 +69,12 @@ const optionsStyles = {
     backgroundColor: colors.Window,
     padding: standardPadding,
   },
-  optionsWrapper: {},
   optionWrapper: {
     margin: standardPadding,
   },
   optionTouchable: {
     activeOpacity: 70,
+    borderRadius: 100,
   },
   optionText: {
     color: colors.TextPrimary,
