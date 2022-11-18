@@ -18,11 +18,11 @@ const txs: Tx[] = [
   },
 ];
 
-export default function Home() {
+export default function Home({ navigation }) {
   const totalSats = txs.reduce((acc, tx) => acc + tx.sats, 0);
   return (
     <View style={styles.container}>
-      <Header />
+      <Header navigation={navigation} />
       <Balance sats={totalSats} />
       <Transactions txs={txs} />
     </View>

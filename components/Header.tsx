@@ -1,11 +1,7 @@
-import {
-  faEllipsisV,
-  faExpand,
-  faWifi,
-} from "@fortawesome/free-solid-svg-icons";
+import { faEllipsisV } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-native-fontawesome";
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, StyleSheet } from "react-native";
 import { colors } from "../theme/colors";
 import {
   Menu,
@@ -14,8 +10,9 @@ import {
   MenuTrigger,
 } from "react-native-popup-menu";
 import { iconColor, standardPadding } from "../theme/theme";
+import { About } from "../screens/About";
 
-export default function Header() {
+export default function Header({ navigation }) {
   return (
     <View style={styles.container}>
       <View style={styles.header}>
@@ -27,7 +24,10 @@ export default function Header() {
             <FontAwesomeIcon icon={faEllipsisV} size={20} style={iconColor} />
           </MenuTrigger>
           <MenuOptions customStyles={optionsStyles}>
-            <MenuOption text="About" />
+            <MenuOption
+              text="About"
+              onSelect={() => navigation.navigate(About)}
+            />
           </MenuOptions>
         </Menu>
       </View>
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
   container: {
     backgroundColor: colors.SlateGreyAccent,
     flexDirection: "row",
-    padding: 5,
+    padding: standardPadding,
     justifyContent: "center",
     alignItems: "center",
   },
@@ -60,7 +60,7 @@ const styles = StyleSheet.create({
     height: 40,
   },
   menuStyle: {
-    margin: -10,
+    margin: -standardPadding,
   },
 });
 
