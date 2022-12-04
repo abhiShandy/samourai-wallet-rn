@@ -1,10 +1,13 @@
 import React from "react";
-import { View, StyleSheet } from "react-native";
+import { StatusBar, StyleSheet } from "react-native";
+import { SafeAreaView } from "react-native-safe-area-context";
 import Balance from "../components/Balance";
 import Header from "../components/Header";
 import Transactions from "../components/TxList";
 import { Tx } from "../lib/types";
+import { colors } from "../theme/colors";
 
+// TODO: replace this with a real API call
 const txs: Tx[] = [
   {
     sats: 12345678,
@@ -18,14 +21,18 @@ const txs: Tx[] = [
   },
 ];
 
-export default function Home({ navigation }) {
+export function Home({ navigation }) {
   const totalSats = txs.reduce((acc, tx) => acc + tx.sats, 0);
   return (
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
+      <StatusBar
+        backgroundColor={colors.SlateGreyAccent}
+        barStyle="light-content"
+      />
       <Header navigation={navigation} />
       <Balance sats={totalSats} />
       <Transactions txs={txs} />
-    </View>
+    </SafeAreaView>
   );
 }
 
@@ -34,5 +41,6 @@ const styles = StyleSheet.create({
     display: "flex",
     flexDirection: "column",
     height: "100%",
+    backgroundColor: colors.SlateGreyAccent,
   },
 });
