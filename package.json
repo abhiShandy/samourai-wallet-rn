@@ -3,30 +3,32 @@
   "version": "0.1.0",
   "description": "Clone of the Samourai Wallet in React Native",
   "scripts": {
-    "start": "expo start"
+    "start": "expo start --clear"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/abhiShandy/samourai-wallet-rn.git"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "license": "GNU GPLv3",
   "bugs": {
     "url": "https://github.com/abhiShandy/samourai-wallet-rn/issues"
   },
-  "homepage": "https://github.com/abhiShandy/samourai-wallet-rn#readme",
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.2.1",
     "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@fortawesome/react-native-fontawesome": "^0.3.0",
+    "@react-navigation/native": "^6.0.13",
+    "@react-navigation/native-stack": "^6.9.1",
     "@types/react": "~18.0.24",
     "@types/react-native": "~0.70.6",
     "expo": "^47.0.6",
     "react": "18.1.0",
     "react-native": "0.70.5",
-    "react-native-svg": "13.4.0",
-    "react-native-safe-area-context": "4.4.1"
+    "react-native-popup-menu": "^0.16.1",
+    "react-native-safe-area-context": "4.4.1",
+    "react-native-screens": "~3.18.0",
+    "react-native-svg": "13.4.0"
   },
   "devDependencies": {
     "typescript": "^4.9.3"
